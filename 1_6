@@ -1,0 +1,12 @@
+//6번 369게임 박수 갯수 구하기
+
+
+def solution(number):
+	count = 0
+	for i in range(1, number + 1): #1부터 끝숫자까지. 뒷번호는 직전 숫자까지만 진행하니까 +1 해주기
+		current = i #현재 숫자가 i 인 경우에
+		while current != 0:  #현재 숫자가 0이 아니면
+			if current % 10 == 3 or current % 10 == 6 or current % 10 == 9: #현재 숫자를 10으로 나눈 나머지가 3,6,9 일떄 (일의자리가 3,6,9로 끝날때)
+				count += 1  #박수 횟수 늘리기
+			current = current // 10  #current를 10 나눠서 십의 자리에 있던 숫자가 일의자리로 오게 만든다음 계속 진행
+	return count
