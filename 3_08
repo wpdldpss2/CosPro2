@@ -1,0 +1,16 @@
+//8번 TV애청자 A씨
+
+
+
+def solution(programs):
+	answer = 0
+	used_tv = [0] * 25  #하루를 25개의 칸으로 나눈다  
+
+	for program in programs:
+		for i in range(program[0], program[1]): #프로그램 시작시간~끝나는 시간을 잡고
+			used_tv[i] = used_tv[i] + 1   #해당하는 시간의 칸에 +1 하기
+			
+	for i in used_tv:
+		if i >= 2:    #2개 이상의 TV가 켜져있는 경우
+			answer = answer + 1   #그러한 시간을 하나 추가
+	return answer
