@@ -1,0 +1,13 @@
+//2번 더 많은 배수 구하기
+
+
+def solution(arr):
+	count_three = func_c(arr)  #3의 배수를 계산하는 함수는 func_c 이며 그 함수에 arr 를 넣은 값을 구하는중
+	count_five = func_a(arr)   #5의 배수도 마찬가지
+	answer = func_b(count_three,count_five)   #위에서 구해놓은 count_three 와 count_five 의 결과값을 func_b에 넣으면 결과값 비교 가능
+	return answer
+
+  arr = [2, 3, 6, 9, 12, 15, 10, 20, 22, 25]
+ret = solution(arr)
+
+print("solution 함수의 반환 값은", ret, "입니다.")
