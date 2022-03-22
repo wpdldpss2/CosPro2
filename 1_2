@@ -1,0 +1,12 @@
+//2번 쇼핑몰 등급별 할인금액
+
+
+def solution(price, grade):
+	answer = 0
+	if grade == 'S':  #s등급의 고객은
+		answer = price - round(price*0.05)  #답이 현재 가격에서 할인가격 뺀 가격
+	elif grade == 'G':
+		answer = price - round(price*0.1)
+	else:
+		answer = price - round(price*0.15)
+	return answer
