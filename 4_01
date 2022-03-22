@@ -1,0 +1,10 @@
+//1번 상담 선생님은 너무 바빠요
+
+
+
+def solution(schedule):
+	answer = []
+	for idx, i in enumerate(schedule):
+		if i == "X":        #상담 선생님의 스케쥴이 찬 경우에는
+			answer.append(idx +1)  #해당 위치의 인덱스 + 1 (0부터 시작해서)에 해당하는 학생은 상담을 받지 못함
+	return answer
