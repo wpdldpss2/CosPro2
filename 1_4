@@ -1,0 +1,8 @@
+//4번 등장하는 가장 많은 수와 적은 수
+
+
+def solution(arr):
+	counter = func_a(arr)  #arr에 있는 x의 갯수 세는 함수
+	max_cnt = func_b(counter)  #counter를 사용해서 얻은 값을 가지고 가장 많이 나온 값 구하기
+	min_cnt = func_c(counter)  #counter함수 사용해서 얻은 값을 가지고 가장 적게 나온 값 구하기
+	return max_cnt // min_cnt  #가장 많은게 가장 적은것의 몇배나 많은지 계산
