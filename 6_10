@@ -1,0 +1,9 @@
+//10번 사과박스 무게의 불량 검사
+
+
+def solution(weight, boxes):
+	answer = 0
+	for x in boxes:
+		if x> weight*1.1 or x < weight * 0.9: #상자 무게가 10%를 초과하거나 그 미만일때 불량품 갯수 1 늘리기
+			answer += 1
+	return answer
