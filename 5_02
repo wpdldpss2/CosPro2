@@ -1,0 +1,10 @@
+//2번 공강시간 구하기
+
+
+
+def solution(time_table):
+	answer = 0
+	first_class = func_c(time_table)   #앞에서부터 첫 수업이 시작하는 시간 구하기
+	last_class = func_a(time_table)    #뒤집어서 앞에서부터(원래 순서의 뒤에서부터) 첫 수업시간 구하기
+	answer = func_b(time_table,first_class,last_class)   #첫수업과 마지막 수업시간을 가지고 공강시간 구하기
+	return answer
