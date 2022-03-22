@@ -1,0 +1,17 @@
+//6번 만드는 것보다 검사하는게 힘들죠
+
+
+def solution(password):
+	capital_count, small_count, digit_count = 0, 0, 0
+	for p in password:
+		if p >= 'A' and p <= 'Z':
+			capital_count += 1
+		elif p >= 'a' and p <= 'z':
+			small_count += 1
+		elif p >= '0' and p <= '9': #'' 처리 잊지말기
+			digit_count += 1
+	if capital_count >= 1 and small_count>=2 and digit_count>=2 :  #대문자 1개이상, 소문자 2개이상, 숫자 2개이상 존재하는 경우
+		answer = True
+	else:
+		answer = False
+	return answer
