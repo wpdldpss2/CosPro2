@@ -1,0 +1,15 @@
+//3번 단체 유니폼 맞추기
+
+
+def solution(people):
+	answer = [0 for _ in range(4)]  #사이즈가 들어갈 함수 4자리 만들기
+	for i in range(len(people)):    #people 의 길이만큼 실행
+		if people[i] <95:             #people[i]번째 사람의 사이즈가 95 이하인 경우에는 
+			answer[0] += 1              #answer의 0번째 칸에 한명 추가. 동일하게 사이즈를 나눠서 끝까지 실행
+		elif 95 <= people[i] < 100:
+			answer[1] += 1
+		elif 100<= people[i] < 105:
+			answer[2] += 1
+		elif 105<= people[i]:
+			answer[3] += 1
+	return answer
