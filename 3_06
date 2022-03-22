@@ -1,0 +1,13 @@
+//6번 타일 색칠방법 구하기
+
+
+
+def solution(tile_length):
+	answer = ''
+	com = 'RRRGGB'
+	if tile_length%6 == 1 or tile_length%6 == 2 or tile_length%6 == 4: # 6으로 나누었을 때 1,2,4가 남으면 색을 차리하는 중간에 끊어져서 칠할 수 없음
+		answer = '-1'
+	else:
+		for i in range(tile_length):
+			answer += com[i % 6]
+	return answer
