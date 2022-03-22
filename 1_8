@@ -1,0 +1,14 @@
+//8번 팰린드롬 판단하기
+
+
+
+def solution(sentence):
+	str = '' #str라는 빈 변수를 제작하고
+	for c in sentence:
+		if c != '.' and c != ' ': #or이면 '.'인 경우에는 ' ' 이 아니니까 포함이 되고 그 반대의 경우도 마찬가지다. 따라서 and로 바꿔야함 
+			str += c #.이나 ' '가 아닌 모든 글자를 이 빈 변수에 넣는다.
+	size = len(str) #이 길이를 구하고
+	for i in range(size // 2): #그 길이의 반(앞뒤가 같으므로 반만 확인해도됨)
+		if str[i] != str[size - 1 - i]: # 가장 앞의 글자와 가장 뒤의 글자가 다른 경우는 false
+			return False
+	return True #false인 경우를 제외했으니 남는건 모두 true
