@@ -1,0 +1,8 @@
+//1번 장갑의 쌍 구하기
+
+
+def func_a(gloves):
+	counter = [0 for _ in range(max_product_number + 1)] #인덱스 0을 제외하기 위해 1 더해줌
+	for x in gloves:
+		counter[x] += 1   # 프로덕트 함수 내에서 x 가 나올때마다 해당하는 번호의 위치에 갯수 카운팅 더해줌
+	return counter
