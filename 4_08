@@ -1,0 +1,29 @@
+//8번 누가 반장이 될까요
+
+
+
+def solution(n, votes):
+	answer = 0
+	votes_len = len(votes)
+	candidate = votes[0]
+	count = 1
+	for i in range (1, votes_len) :
+		if candidate == votes[i] :
+			count += 1     #표를 받은 후보자는 +1을 받는다
+		else :
+			count -= 1     #표를 받지 못하면 -1을 받는다
+		if count == 0 :   
+			candidate = votes[i]
+			count = 1
+
+	test_count = 0
+	for i in range(0, votes_len) :
+		if votes[i] == candidate :
+			test_count = 1
+
+	if test_count > 0 :   #표를 받으면 1 못받으면 -1을 주기에 길이의 반이 아닌 0을 넘어야 과반이 된다.
+		answer = candidate
+	else :
+		answer = -1
+
+	return answer
