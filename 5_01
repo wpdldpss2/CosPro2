@@ -1,0 +1,13 @@
+//1번 사다리 게임의 승자 구하기
+
+
+
+def solution(ladders, win):
+	answer = 0
+	player = [1, 2, 3, 4, 5, 6]
+	for e in ladders:
+		temp = player[e[0]-1]  #e[0]-1 은 첫번째 가로줄이 나오기 전의 플레이어 위치. 바뀌기 전 자리를 temp 파일로 저장 ex)1번 플레이어
+		player[e[0]-1] = player[e[1]-1]   #1번 플레이어가 2번 플레이어의 자리로 이동
+		player[e[1]-1] = temp             #2번 플레이어는 전에 temp에 저장했던 1번 플레이어의 자리로 이동. 서로의 위치가 바뀜
+	answer = player[win-1]              #인덱스는 0부터 시작하고 자리 숫자는 1부터 시작하니 항상 -1 해주는것 잊지말기
+	return answer
