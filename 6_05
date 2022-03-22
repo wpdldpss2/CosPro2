@@ -1,0 +1,11 @@
+//5번 음료수 마시기
+
+
+def solution(money, price, n):
+	answer = 0
+	empty_bottle = answer = money // price
+	while n <= empty_bottle:   #음료수를 사 마시고 더 살 수 있을 정도로 병이 남는다면
+		empty_bottle = empty_bottle - n   #가지고있는 빈 병에서 n개만큼의 빈 병을 사용하여
+		answer += 1  #음료를 한 병 더 마시고
+		empty_bottle += 1  #다 마신 이후에  빈 병도 한 병 늘어난다
+	return answer
