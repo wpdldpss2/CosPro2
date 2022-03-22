@@ -1,0 +1,13 @@
+//5번 몬스터 공격하기
+
+
+
+def solution(attack, recovery, hp):
+	count = 0
+	while(True):
+		count += 1  # 한번 돌때마다 턴 횟수 증가
+		hp -= 30    #각 턴마다 몬스터 공격으로 피 30 감소
+		if hp <= 0: #피가 0보다 낮은 경우에는
+			break     #몬스터 사망으로 종료
+		hp += 10    #죽지 않았으면 피 10 회복
+	return count
