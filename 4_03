@@ -1,0 +1,10 @@
+//3번 획득 점수 구하기
+
+
+
+def solution(n, bundle):
+	a_cards = func_a(bundle, 0)[:n]  #a의 점수는 번들에서 뽑은 수를 인덱스 0부터 2씩 띄워가며 저장
+	b_cards = func_a(bundle, 1)[:n]  # ''   ''  1부터 2씩 ''   ''
+	a_score = func_c(a_cards)        # a_score는 a의 카드들의  점수 합
+	b_score = func_c(b_cards)        #b_score는 b의 카드들의 점수 합
+	return func_b(a_score, b_score)   #a 와 b 의 스코어 비교해서 승자 가리기
