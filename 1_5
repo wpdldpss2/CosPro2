@@ -1,0 +1,10 @@
+//5번 배열의 순서 뒤집기
+
+
+def solution(arr):
+	left, right = 0, len(arr)-1  #왼쪽의 순서와 오른쪽의 순서를 매기기
+	while left < right:   #왼쪽이 오른쪽보다 작은 숫자인 경우에 (왼쪽이 더 커지면 반 지점을 넘어온 상태라 이미 모든 숫자가 뒤집어짐.)
+		arr[left], arr[right] = arr[right], arr[left] #왼쪽 숫자와 오른쪽 숫자의 위치를 바꾼다
+		left += 1 #왼쪽은 하나씩 커지고
+		right -= 1 #오른쪽은 하나씩 작아지며 중앙에서 만나게됨
+	return arr
