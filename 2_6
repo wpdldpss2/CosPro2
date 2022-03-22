@@ -1,0 +1,13 @@
+//6번 엘리베이터의 총 이동거리 구하기
+
+
+
+def solution(floors):
+	dist = 0
+	length = len(floors)
+	for i in range(1,length):           #이동한 거리 함수의 길이만큼 반복
+		if floors[i] > floors[i-1]:       #이동을 한 위치가  원래 위치보다 높은 층에 있으면
+			dist += floors[i] - floors[i-1] #이동 후 층에서 이동 전 층 빼기
+		else:                             #이동 전이 더 높은 층이었으면
+			dist += floors[i-1] - floors[i] #반대로 빼기
+	return dist
