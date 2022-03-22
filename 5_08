@@ -1,0 +1,12 @@
+//8번 상수도 요금 구하기
+
+
+def solution(usage):
+	answer = 0
+	if usage > 30:
+		answer = 20 * 430 + 10 * 570 + (usage - 30) * 840  #31톤 이상 사용시 그 밑의 요금에다가 현재 사용한 양에서 30을 뺀 값을 요금으로 곱해야한다
+	elif usage > 20:
+		answer = 20 * 430 + (usage - 20) * 570
+	else:
+		answer = usage * 430
+	return answer
