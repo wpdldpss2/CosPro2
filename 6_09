@@ -1,0 +1,11 @@
+//9번 양말색이 달라도 잘 신는 아이
+
+
+def solution(socks):
+	answer = 0
+	count = [0 for _ in range(10)]
+	for s in socks:
+		count[s] += 1   #색별로 해당 위치에 갯수 추가
+	for c in count:
+		answer += (c // 2)  #색 안에서 같은 색끼리 맞는 몫을 최종 결과에 더한다
+	return answer
