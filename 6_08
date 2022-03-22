@@ -1,0 +1,9 @@
+//8번 주어진 수와 뒤집은 수의 차
+
+
+def solution(number):
+	answer = 0
+	digit = func_b(number)   #숫자를 10씩 나누고 나누어질때마다 자릿수값을 1씩 더한다
+	convert_number = func_c(number,digit)  #숫자를 10씩 나누어가며 그 나머지를 앞에서부터 차례대로 적는다 (숫자 뒤집기)
+	answer = func_a(number,convert_number)  #더 큰 숫자에서 작은 수 빼면서 차이 구하기
+	return answer
