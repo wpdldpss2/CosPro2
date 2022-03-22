@@ -1,0 +1,11 @@
+//9번 중복문자 삭제하기
+
+
+
+def solution(characters):
+	result = "" #빈 변수를 만들고
+	result += characters[0] #characters의 첫 글자를 넣고
+	for i in range(1, len(characters)): #0은 제외하고 넣어야 첫 글자가 중복이 되지 않는다.
+		if characters[i - 1] != characters[i]: #현재 글자가 뒷글자와 동일하지 않은 경우에는
+			result += characters[i] #결과창에 현재 글자 넣기
+	return result
