@@ -1,0 +1,12 @@
+//9번 시험등수 구하기
+
+
+def solution(score):
+	answer = [1] * len(score)     #score의 길이만큼 빈 칸 제작
+	for i in range(len(score)):   #스코어 하나씩을
+		for j in range(len(score)): #각 스코어와 하나씩 비교
+			if score[i] < score[j]:   #본인의 스코어보다 점수가 좋은 사람이 존재하면 등수를 1씩 올림 ([1]을 제작했으니 초기숫자는 1에서 시작)
+				answer[i] += 1
+	
+		
+	return answer
