@@ -1,0 +1,27 @@
+//5번 여행객의 총 교통비 구하기
+
+
+
+def solution(member_age, transportation):
+	if transportation == 'Bus':
+		adult_expense = 40000
+		child_expense = 15000
+	elif transportation == 'Ship':
+		adult_expense = 30000
+		child_expense = 13000
+	elif transportation == 'Airplane':
+		adult_expense = 70000
+		child_expense = 45000
+
+	if len(member_age) >= 10:
+		adult_expense = adult_expense - adult_expense*0.1  #어른 할인율
+		child_expense = child_expense - child_expense*0.2  #아이 할인율
+
+	total_expenses = 0
+	for age in member_age:
+		if age >= 20:   #어른의 기준은 20세 이상
+			total_expenses += adult_expense
+		else:
+			total_expenses += child_expense
+
+	return total_expenses
