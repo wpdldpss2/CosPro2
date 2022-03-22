@@ -1,0 +1,12 @@
+//5번 추가운동여부 알려주기
+
+
+
+def solution(calorie):
+	min_cal = 1001    #min_cal을 0에서 시작하면 항상 0이 가장 작은 수. min_cal은 최댓값에서 시작해야함
+	answer = 0
+	for cal in calorie:
+		if cal > min_cal:
+			answer += cal - min_cal
+		min_cal = min(min_cal, cal)
+	return answer
