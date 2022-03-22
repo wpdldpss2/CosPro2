@@ -1,0 +1,10 @@
+//2번 종이 나누어 주기
+
+
+def solution(papers, K):
+	length = len(papers)
+	for i, paper in enumerate(papers):
+		K -= paper
+		if K < 0:
+			length = i-1  #마지막 사람은 종이를 충분히 받지 못했으니 총 인원에서 제외
+	return length
