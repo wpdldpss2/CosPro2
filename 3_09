@@ -1,0 +1,10 @@
+//9번 주차장에 몇대가 들어올 수 있나
+
+
+
+def solution(day, numbers):
+	count = 0
+	for number in numbers:
+		if number%2 == day%2:  #날짜와 번호판 뒷번호가 같은 경우에만 들어올 수 있음
+			count += 1
+	return count
