@@ -1,0 +1,11 @@
+//10번 시험 합격자 구하기
+
+
+
+def solution(scores, cutline):
+	answer = 0
+	for i in scores:   #점수 내에서 
+		if i >= cutline:   #커트라인보다 점수가 높거나 같은 사람이 있으면
+			answer += 1                #합격자 1명 추가
+		
+	return answer
