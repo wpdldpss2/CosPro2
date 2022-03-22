@@ -1,0 +1,24 @@
+//4번 단어의 오타 수정하기
+
+
+
+def solution(words, word):
+	count = 0
+	for text in words:                  #words 함수에 있는 요소들을 하나씩 분리
+		for i in range(len(text)):        #text의 길이만큼 잘라서 하나씩 비교
+			if text[i] != word[i]:          # text 에 있는 글자와 word에 있는 글자가 서로 다른경우 = 오타가 난 경우
+				count += 1                    # count를 늘려준다 
+					
+			
+	return count
+
+
+
+# 또다른 풀이방법
+
+def solution(words, word):
+  count = 0
+  for comp in words:           #comp 라는 임의로 담아낼 변수 제작
+    for x,y in zip(comp,word): #zip은 서로 다른 두 변수의 값을 각각 x,y 로 놓았을때 (인덱스 동일)
+      if x != y:               #x 와 y 값이 서로 다르면
+        count += 1             #count 늘리기
