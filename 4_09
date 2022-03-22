@@ -1,0 +1,20 @@
+//9번 위험한 지역 몇개인지 알려주기
+
+
+
+def solution(height):
+	count = 0
+	for x in range(4):    #x좌표 최대4
+		for y in range(4):  #y좌표 최대4
+			if x >0 and height[x-1][y] < height[x][y]:  #x가 0이상이며 같은 x 좌표에서 직전 자리보다 높으면 넘어감
+				pass
+			elif x<3 and height[x+1][y] < height[x][y]:  #x가 3보다 작고 그 다음 자리ㅣ보다 높으면 넘어감
+				pass
+			elif y > 0 and height[x][y-1] < height[x][y]: #y로 동일한 방식
+				pass
+			elif y<3 and height[x][y+1] < height[x][y]:
+				pass
+			else:
+				count += 1   #주변에 본인보다 높은 지역이 없으면 count 1 올림
+			
+	return count
