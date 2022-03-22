@@ -1,0 +1,9 @@
+//7번 오른 점수와 떨어진 점수 구하기
+
+
+
+def solution(mid_scores, final_scores):
+	up = func_a(mid_scores, final_scores)
+	down = func_b(final_scores, mid_scores)   #func_b 에서 서로 빼는 score의 순서를 바꿨기 때문에 둘 다 기말에서 중간을 빼기 위해서는 여기서도 뒤집어줘야함
+	answer = [up, down]
+	return answer
