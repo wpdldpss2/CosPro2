@@ -1,0 +1,9 @@
+//1번 학생의 등수 구하기
+
+
+
+def solution(scores, n):
+	score = func_c(scores,n)  #학생의 번호 순서 알려주는 함수
+	func_b(scores)            #성적을 역순으로 변경시켜주는 함수
+	answer = func_a(scores,score) #해당하는 점수를 가진 학생을 등수 자리에 넣어주는 함수
+	return answer
