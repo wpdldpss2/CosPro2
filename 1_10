@@ -1,0 +1,12 @@
+//10번 평균 이하의 갯수 구하기
+
+
+
+def solution(data):
+	total = sum(data) #토탈은 전체 값을 더한 값
+	average = total / len(data) #평균은 토탈을 길이로 나눈 값. 길이를 토탈로 나눈게 아님.
+	cnt = 0 #0에서 시작해서
+	for d in data: 
+		if d <= average: #d 가 평균 이하인 경우에
+			cnt += 1 #cnt 하나씩 늘리기
+	return cnt
