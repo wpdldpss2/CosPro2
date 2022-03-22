@@ -1,0 +1,9 @@
+//1번 저는 따뜻한 날이 좋아요
+
+
+def solution(temperature, A, B): #전체가 아닌 A일과 B일 사이에서만 구하는것
+	answer = 0
+	for i in range(A, B):
+		if temperature[i] > temperature[A] and temperature[i] > temperature[B]:
+			answer += 1
+	return answer
