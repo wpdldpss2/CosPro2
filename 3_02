@@ -1,0 +1,9 @@
+//2번 장학생 수 구하기
+
+
+
+def solution(current_grade, last_grade):
+	rank = func_b(current_grade)   #현재 성적을 가지고 순위 메기는 함수
+	max_diff_grade = func_c(current_grade, last_grade)   # 현재 성적과 지난 성적을 가지고 가장 많이 오른 사람 찾는 함수
+	answer = func_a(current_grade, last_grade, rank, max_diff_grade)  # 장학금을 받을 사람 지정하는 함수
+	return answer
