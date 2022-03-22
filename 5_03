@@ -1,0 +1,13 @@
+//3번 벌금 구하기
+
+
+def solution(speed, cars):
+	answer = 0
+	for x in cars:
+		if x >= speed * 11 / 10 and x < speed * 12 / 10:  #11/10은 1.1배 = 10%넘길때. 같은 방식으로 12/10 =20% 13/10 = 30% 위반한 값을 나타냄
+			answer += 3  
+		elif x >= speed * 12 /10 and x < speed * 13/10:
+			answer += 5
+		elif x >= speed * 13/10:
+			answer += 7
+	return answer
