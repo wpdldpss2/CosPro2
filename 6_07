@@ -1,0 +1,11 @@
+//7번 의자와 책상을 사고싶어요
+
+
+def solution(money, chairs, desks):
+	answer = 0
+	for chair in chairs:
+		for desk in desks:  #모든 의자 +책상 조합에 대해서
+			price = chair + desk  #가격은 의자+책상
+			if answer < price and price < money: #새로 나온 가격이 기존의 가격보다 비싸면서 예산보다 적은 경우에
+				answer = price  #새로 나온  가격을 최종 가격으로 설정
+	return answer
