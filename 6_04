@@ -1,0 +1,20 @@
+//4번 카드뽑기 게임
+
+
+def solution(cards):
+	answer = 0
+	col = [0,0,0] #카드의 색을 담다둘 col 임시함수를 제작한다
+	for i in cards:
+		if i[0] == "red":  #카드의 i[0] = 색상 이 빨강이면 col의 인덱스0에 1 추가
+			col[0] += 1
+		elif i[0] == "black":  #검정이면 1에 1 추가
+			col[1] += 1
+		elif i[0] == "blue":  #파랑이면 2에 1 추가
+			col[2] += 1
+		answer = answer + int(i[1])  #answer에는 i[1]=카드의 숫자 를 모두 더한다
+	if 3 in col:   #col 함수에 3이라는 숫자가 존재하면 = 3개의 같은 색상이 나온 경우
+		answer = answer * 3  #카드값에 3을 곱한다
+	elif 2 in col:  #2가 있는경우에는
+		answer = answer * 2   #2를 곱한다
+			
+	return answer
