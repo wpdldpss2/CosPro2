@@ -1,0 +1,10 @@
+//10번 내 절반이 여기에 있는가
+
+
+
+def solution(arr):
+	answer = 0
+	for i in arr:     #arr에 있는 i 에 대해서
+		if i/2 in arr:  #그 값의 반인 i/2도 arr에 있는지를 찾는 함수
+			answer += 1   #존재하면 +1
+	return answer
