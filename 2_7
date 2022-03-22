@@ -1,0 +1,12 @@
+//7번 섭씨, 화씨 온도 구하기
+
+
+
+def solution(value, unit):
+	converted = 0
+	if unit == "C":
+		value = value * 1.8 + 32
+	if unit == "F":
+		value = (value - 32) / 1.8   #사칙연산 순서 생각하며 괄호 주의하기
+	converted = int(value)
+	return converted
