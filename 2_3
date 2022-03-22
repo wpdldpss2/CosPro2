@@ -1,0 +1,9 @@
+//3번 짝수들의 제곱의 합 구하기
+
+
+def solution(N, M):
+	answer = 0
+	for x in range(N,M+1):   #N 부터 M까지의 수 중에서 (+1 해줘야 M까지 간다)
+		if x%2 ==0:  #2로 나눈 나머지가 0인 = 짝수인
+			answer += x**2  #값을 제곱해서 더해준다
+	return answer
