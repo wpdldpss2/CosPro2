@@ -1,0 +1,11 @@
+//6번 수학시험에 모든 걸 건다
+
+
+def solution(korean, english):
+	answer = 0
+	math = 210 - (korean + english)   #사칙연산 순서 생각하고 괄호 확인 잘 하기
+	if math > 100:
+		answer = -1
+	else:
+		answer = math
+	return answer
