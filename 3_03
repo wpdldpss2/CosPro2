@@ -1,0 +1,8 @@
+//3번 체조선수의 점수 구해주기
+
+
+
+def solution(scores):
+	answer = int((sum(scores)-min(scores)-max(scores))//(len(scores)-2)) #평균을 구하는 식 세우기. 가장 큰 값과 작은 값을 min/max 함수를 하용하여 제거하고 길이에서 제거한 두 숫자만큼 제거(-2)한 후 나눈다. 정수로 변환하는것 잊지말기
+	
+	return answer
