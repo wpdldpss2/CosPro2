@@ -1,0 +1,33 @@
+//2번 시험 합격자가 몇명이지?
+
+
+def func_a(passed, non_passed):  # 통과 종목 개수 카운트
+    return ( passed > 1 and non_passed ==0 )  #통과한 과목이 1개 이상이며 통과하지 못한 과목이 없는 경우
+
+def func_b(scores):  # 통과 점수의 반을 넘기지 못한 종목 개수 카운트
+    answer = 0
+    if scores[0] < 40:
+        answer += 1
+    if scores[1] < 44:
+        answer += 1
+    if scores[2] < 35:
+        answer += 1
+    return answer
+
+def func_c(scores):  # 통과 종목 개수 카운트
+    answer = 0
+    if scores[0] >= 80:
+        answer += 1
+    if scores[1] >= 88:
+        answer += 1
+    if scores[2] >= 70:
+        answer += 1
+    return answer
+
+def solution(scores): 
+	answer = 0
+	for my_score in scores:
+		passed = func_c(my_score)  #내 점수에서 통과한 과목 갯수 카운트
+		non_passed = func_b(my_score)  #내 점수에서 통과점수의 반 이하의 점수를 받은 과목 카운트
+		answer += func_a(passed, non_passed) #최종 통과자 인원수
+	return answer
